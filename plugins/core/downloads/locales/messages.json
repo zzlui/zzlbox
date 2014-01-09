@@ -1,0 +1,10 @@
+{
+    "dls.downloads": "Downloads",
+    "dls.description": "Show downloads progress",
+    "dls.fail_reason": "Fail reason",
+    "dls.status": "Status",
+    "dls.active": "active",
+    "dls.failed": "failed",
+    "dls.all": "all",
+    "dls.postproc": "Post processing"
+}

@@ -1,0 +1,18 @@
+{
+    "lbl.label": "Labels",
+    "lbl.desc": "Allow to mark files by labels, filter/navigation by labels",
+    "lbl.labels": "labels",
+    "lbl.appended": "Appended",
+    "lbl.name": "Name",
+    "lbl.colors": "Colors",
+    "lbl.under": "Insert under",
+    "lbl.save": "Save",
+    "lbl.remove": "Remove",
+    "lbl.delete": "Delete",
+    "lbl.cancel": "Cancel",
+    "lbl.apply": "Apply",
+    "lbl.create": "Create",
+    "lbl.removelbl": "Remove labels(s)",
+    "lbl.removelbldesc": "These label(s) will be permanently deleted and cannot be recovered",
+    "lbl.removefiles": "Remove also all files marked by above labels"
+}

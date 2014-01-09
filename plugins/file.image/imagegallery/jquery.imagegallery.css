@@ -1,0 +1,217 @@
+
+.ui-icon-fit-to-screen {
+    background-image: url('img/fit-to-screen.png') !important;
+}
+
+.ui-icon-fullscreen {
+    background-image: url('img/fullscreen.png') !important;
+}
+
+.ui-icon-thumbnails {
+    background-image: url('img/thumbnails.png') !important;
+}
+
+.ui-icon-preview {
+    background-image: url('img/preview.png') !important;
+}
+
+.ui-icon-albums {
+    background-image: url('img/albums.png') !important;
+}
+.zzlbox-button-icon-small .ui-icon-albums {
+    background-image: url('img/albums-small.png') !important;
+}
+
+.ui-icon-play-slideshow {
+    background-image: url('img/play-slideshow.png') !important;
+}
+
+.ui-icon-pause-slideshow {
+    background-image: url('img/pause-slideshow.png') !important;
+}
+
+.ui-icon-exit {
+    background-image: url('img/exit.png') !important;
+}
+
+.ui-icon-arrow-left {
+    background-image: url('img/arrow-left.png') !important;
+}
+
+.ui-icon-arrow-right {
+    background-image: url('img/arrow-right.png') !important;
+}
+
+.file-type-png {
+    background-image: url('img/types/png.png');
+}
+
+.file-type-gif {
+    background-image: url('img/types/gif.png');
+}
+
+.file-type-jpg {
+    background-image: url('img/types/jpg.png');
+}
+
+.image-gallery {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    height: 96%;
+    background: #DADADA;
+    box-shadow: #999 2px 2px 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.image-gallery .loader {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    z-index: 3;
+}
+
+.image-gallery .closeable {
+    background-image: url('img/close.png');
+    position: absolute;
+    z-index: 20;
+    right: 10px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.7;
+}
+
+.image-gallery .closeable:hover {
+    opacity: 1.0;
+}
+
+.image-gallery .controls {
+    position: absolute;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    opacity: 0.2;
+}
+
+.image-gallery .controls:hover {
+    opacity: 1.0;
+}
+
+.image-gallery .albums {
+    z-index: 5;
+    background: #696969;
+    background: rgba(0,0,0, 0.7);
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.image-gallery .albums .albums-item {
+    color: #AAAAAA;
+    margin: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.image-gallery .albums .albums-item:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+    background: #363636;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery .albums .albums-item.active {
+    color: #FFFFFF;
+    font-size: bold;
+    font-size: 1.3em;
+}
+
+.image-gallery .albums .albums-item.active:hover {
+    text-decoration: none;
+}
+
+.image-gallery .image-view {
+    height: 100%;
+    text-align: center;
+    overflow: auto;
+    position: relative;
+}
+
+.image-gallery .image-view.fit-to-screen {
+    overflow: hidden;
+}
+
+.image-gallery .image-view.moveable img {
+    cursor: move;
+}
+
+.image-gallery .image-view.fit-to-screen img {
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+.image-gallery .thumbs-scroll {
+    height: 100%;
+    overflow: auto;
+    float: left;
+}
+
+.image-gallery .thumbs-scroll .scroll-item {
+    width: 100px;
+    height: 100px;
+    margin: 2px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #BABABA;
+    background-repeat: no-repeat;
+    background-position: 18px 18px;
+}
+
+.image-gallery .thumbs-scroll .scroll-item.active {
+    background-color: white;
+}
+.image-gallery .thumbs-scroll .scroll-item:hover {
+    overflow: visible;
+    z-index: 10;
+    border-color: #AAAAAA;
+    box-shadow: #696969 0 0 1px;
+    background-color: #DADADA;
+}
+
+.image-gallery .thumbs-scroll .scroll-item span {
+    white-space: nowrap;
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    opacity: 0.5;
+    font-size: 0.7em;
+    padding: 2px;
+    top: 0;
+}
+
+.image-gallery .thumbs-scroll .scroll-item:hover span,
+.image-gallery .thumbs-scroll .scroll-item.active span {
+    opacity: 1.0;
+}
+
+.image-gallery .thumbs-scroll .scroll-item:hover span {
+    background-color: #DADADA;
+    background-color: rgba(255, 255, 255, 0.3);
+    white-space: normal;
+    word-wrap: break-word;
+}

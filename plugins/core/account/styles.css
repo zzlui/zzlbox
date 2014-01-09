@@ -1,0 +1,8 @@
+
+.zzlbox-button-icon .ui-icon-account {
+    background-image: url(account.png);
+}
+
+.zzlbox-button-icon.account-warning .ui-icon-account {
+    background-image: url(account-warning.png);
+}

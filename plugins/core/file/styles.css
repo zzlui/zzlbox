@@ -1,0 +1,12 @@
+
+.zzlbox-button-icon .ui-icon-download {
+    background-image: url(download.png);
+}
+
+.zzlbox-button-icon.zzlbox-button-icon-small .ui-icon-download {
+    background-image: url(download-small.png);
+}
+
+.zzlbox-button-icon .ui-icon-back {
+    background-image: url(back.png);
+}

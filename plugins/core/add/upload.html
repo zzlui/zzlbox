@@ -1,0 +1,83 @@
+<div class="center-wrapper form">
+    <div id="add-file" class="center">
+
+        <h3>${__('add.file_add')}</h3>
+        <div>
+            <span class="title">{{html __('add.f_remote')}}:</span>
+            <div class="ui-state-default">
+                <input type="text" id="upload-url" />
+                <ul id="upload-list-url"></ul>
+            </div>
+
+            <span class="title">{{html __('add.f_local')}}:</span>
+            <div class="ui-state-default">
+                <input type="file" id="upload-field" multiple="multiple" name="file" />
+                <ul id="upload-list-file"></ul>
+            </div>
+
+            <span class="title">${__('add.f_notify')}:</span>
+            <div class="ui-state-default" style="background: none; border: none;">
+                <span id="file-notification-buttonset">
+                    <input type="radio" name="notify" value="1" id="notify-yes" checked="checked" />
+                    <label for="notify-yes">${__('add.yes')}</label>
+                    <input type="radio" name="notify" value="0" id="notify-no" />
+                    <label for="notify-no">${__('add.no')}</label>
+                </span>
+            </div>
+
+            <div class="clear"></div>
+
+            <button class="right" id="upload-button">${__('add.files_add')}</button>
+
+            <div class="clear"></div>
+        </div>
+
+        <div id="feed-add" style="display:none">
+        <h3>${__('add.feed_add')}</h3>
+
+        <div>
+            <span class="title">${__('add.r_name')}:</span>
+            <div><small><i>(${__('add.r_name_l')})</i></small></div>
+            <div class="ui-state-default">
+                <input type="text" id="feed-name" />
+            </div>
+
+            <span class="title">${__('add.r_url')}:</span>
+            <div><small><i>${__('add.r_url_l')}</i></small></div>
+            <div class="ui-state-default">
+                <input type="text" id="feed-url" />
+            </div>
+
+            <span class="title">${__('add.f_notify')}:</span>
+            <div class="ui-state-default" style="background: none; border: none;">
+            <span id="feed-notification-buttonset">
+                <input type="radio" name="feed-notification" id="feed-notification-yes" value="notify" checked="checked" />
+                <label for="feed-notification-yes">${__('add.yes')}</label>
+                <input type="radio" name="feed-notification" id="feed-notification-no" value="" />
+                <label for="feed-notification-no">${__('add.no')}</label>
+            </span>
+            </div>
+
+            <div class="clear"></div>
+
+            <span class="title">${__('add.pub_after')}:</span>
+            <div class="ui-state-default">
+                <input type="text" id="feed-pubdate" />
+            </div>
+
+            <span class="title">${__('add.pub_ep')}:</span>
+            <div><small><i>(${__('add.pub_ex')})</i></small></div>
+            <div class="ui-state-default">
+                <input  type="text" id="feed-episode" />
+            </div>
+
+            <ul id="upload-list-feed"></ul>
+
+            <div class="clear"></div>
+
+            <button class="right" id="upload-feed-button">${__('add.add_feed')}</button>
+        </div>
+        </div>
+
+    </div>
+</div>

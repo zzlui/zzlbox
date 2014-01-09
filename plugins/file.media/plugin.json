@@ -1,0 +1,16 @@
+{
+    "name": "media.label",
+    "description": "media.desc",
+
+    "tpl": ["jplayer"],
+    "css": ["jquery.jplayer/skins/pink.flag/jplayer.pink.flag.css",
+            "jplayer.css"],
+
+    "include": ["jquery.jplayer/jquery.jplayer.js",
+                "jquery.jplayer/jplayer.playlist.js",
+                "plugin.js"],
+
+    "init": "FileMedia",
+
+    "locales": ["ru"]
+}

@@ -1,0 +1,20 @@
+{
+    "name": "acc.account",
+    "description": "acc.desc",
+
+    "css": "styles.css",
+
+    "tpl": ["account", "plugins", "plugins-item", "transactions", "transaction-item"],
+
+    "include": ["views.js", "plugin.js"],
+
+    "init": "Account",
+
+    "routes": {
+        "account": "Account",
+        "plugins": "Plugins",
+        "transactions": "Transactions"
+    },
+
+    "locales": ["ru"]
+}

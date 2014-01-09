@@ -1,0 +1,11 @@
+<div class="file ui-widget-content ui-list-item">
+    <div class="name"><input type="checkbox" /><span class="title">${name}</span></div>
+    <div class="main">
+        {{if size}}<span>${__('files.size')}: <b>{{html $(size).fileSize()}}</b></span>{{/if}}
+        {{if mtime}}<span>${__('files.updated')}: <b>{{html $(mtime).fileDate()}}</b></span>{{/if}}
+        {{if ctime}}<span>${__('files.added_on')}: {{html $(ctime).fileDate()}}</span>{{/if}}
+        {{if status}}<span>${__('files.status')}: <b class="status-${status}">${__('st.' + status)}</b></span>{{/if}}
+    </div>
+    <div class="addons">{{html $item.addons()}}</div>
+    <div class="actions">{{html $item.actions()}}</div>
+</div>

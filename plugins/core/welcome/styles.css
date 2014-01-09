@@ -1,0 +1,23 @@
+
+#welcome {
+    margin: auto;
+}
+#welcome input.ui-button {
+    display: inline-block;
+    clear: none;
+}
+.register-link {
+    margin: 10px;
+    padding: 10px;
+}
+#register-button {
+    display: block;
+}
+
+.vertical-splitter {
+    padding-left: 30px;
+    margin: 5px;
+    border-left: 1px solid #dadada;
+    width: 320px;
+    min-height: 300px;
+}

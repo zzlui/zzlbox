@@ -1,0 +1,12 @@
+
+#add-file input {
+    width: 40em;
+}
+#add-file ul {
+    font-size: 0.8em;
+}
+
+.zzlbox-button-icon .ui-icon-upload {
+    background-image: url(upload.png);
+}
+

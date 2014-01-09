@@ -1,0 +1,10 @@
+{
+    "name": "Fileset",
+    "description": "Display files list and other fileset info",
+
+    "css": "styles.css",
+
+    "include": "plugin.js",
+
+    "init": "Fileset"
+}

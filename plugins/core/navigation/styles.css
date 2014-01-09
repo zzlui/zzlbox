@@ -1,0 +1,51 @@
+
+#navigation {
+    float: right;
+}
+
+.panel-navigation {
+    padding: 0;
+}
+.panel-navigation.detached {
+    padding: 5px;
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #DDD;
+    box-shadow: #DDD 0px -1px 2px;
+    width: 250px;
+}
+
+.panel-navigation a.collapsible-button {
+    font-size: 0.8em;
+    margin: 0.2em;
+    padding: 0.2em 0px 0.2em 16px;
+    /*color: #696969;*/
+    text-decoration: none;
+}
+
+.panel-navigation a.collapsible-button:hover {
+    text-decoration: underline;
+}
+
+.panel-navigation .navigation-item {
+    display: block;
+    margin: 0.2em;
+    padding: 0.2em 0 0.2em 24px;
+    text-decoration: none;
+    border: none;
+}
+
+.panel-navigation .navigation-item-group {
+    border-top: 1px solid #DADADA;
+}
+
+/*.panel-navigation .navigation-item-group-labeled {
+}*/
+
+.panel-navigation .navigation-item-group-label {
+    border-bottom: 1px solid #EDEDED;
+    margin: 10px 0 7px 0;
+    color: #AAAAAA;
+    padding-left: 20px;
+    font-size: 0.65em;
+}

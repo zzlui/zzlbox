@@ -1,0 +1,7 @@
+{
+    "name": "tor.label",
+    "description": "tor.desc",
+    "include": "plugin.js",
+    "init": "Torrents",
+    "locales": ["ru"]
+}

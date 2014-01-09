@@ -1,0 +1,7 @@
+{
+    "name": "Scroll pagination",
+    "description": "Load next files on scroll",
+    "require": "core/files",
+    "include": "plugin.js",
+    "init": "ScrollPagination"
+}

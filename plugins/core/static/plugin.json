@@ -1,0 +1,23 @@
+{
+    "name": "Static pages",
+    "description": "Static information pages. WIKI.",
+
+    "locales": ["ru"],
+
+    "require": "core/welcome",
+
+    "tpl": ["footer-menu", "docs/api"],
+
+    "css": "styles.css",
+
+    "include": ["plugin.js", "views.js"],
+
+    "init": "StaticPages",
+
+    "routes": {
+        "t/*path": "Static",
+        "billing": "Billing",
+        "billing/addons": "Billing",
+        "docs/*path": "Docs"
+    }
+}

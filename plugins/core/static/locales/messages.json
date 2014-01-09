@@ -1,0 +1,30 @@
+{
+    "s.acc": "Account",
+    "s.plugins": "Plugins and features",
+    "s.support": "Support",
+    "s.about": "About Us",
+    "s.legal": "Legal",
+
+    "s.pricing": "Pricing",
+    "s.buye": "Buy extra traffic",
+    "s.edit": "Edit account",
+    "s.plugins": "Plugins",
+
+    "s.players": "VLC and KMPlayer",
+    "s.mc": "Media centers (XBMC, PS3, XBOX)",
+    "s.browsers": "Firefox and Chrome",
+    "s.ts": "Video Transcoding (iPhone/iPad)",
+    "s.api": "Open API",
+    "s.papi": "Plugins API",
+
+    "s.faq": "Support and FAQ",
+    "s.speed": "How to increase speed",
+
+    "s.contacts": "Contact us",
+    "s.twitter": "Follow us in Twitter",
+    "s.facebook": "Join us on Facebook",
+
+    "s.terms": "Terms of Service",
+    "s.privacy": "Privacy Policy",
+    "s.dmca": "DMCA"
+}

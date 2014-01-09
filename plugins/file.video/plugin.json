@@ -1,0 +1,10 @@
+{
+    "name": "video.info",
+    "description": "video.desc",
+
+    "include": "plugin.js",
+
+    "init": "FileVideo",
+
+    "locales":["ru"]
+}

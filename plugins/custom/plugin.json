@@ -1,0 +1,7 @@
+{
+    "name": "Some custom plugin",
+    "description": "This is example plugin",
+    "css": "styles.css",
+    "include": "plugin.js",
+    "init": "CusomPlugin"
+}

@@ -1,0 +1,18 @@
+{
+    "name": "add.add",
+    "description": "add.desc",
+
+    "tpl": ["upload"],
+
+    "css": "styles.css",
+
+    "include": "plugin.js",
+
+    "init": "Upload",
+
+    "routes": {
+        "add": "Upload"
+    },
+
+    "locales": ["ru"]
+}

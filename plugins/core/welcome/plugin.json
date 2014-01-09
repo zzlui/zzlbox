@@ -1,0 +1,15 @@
+{
+    "name": "Welcome",
+
+    "css": "styles.css",
+
+    "description": "Welcome page, user model",
+
+    "include": ["views.js", "models.js", "welcome.js"],
+
+    "init": "Welcome",
+
+    "routes": {
+        "*path": "Welcome"
+    }
+}

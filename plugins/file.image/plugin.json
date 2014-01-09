@@ -1,0 +1,14 @@
+{
+    "name": "img.label",
+    "description": "img.desc",
+
+    "css": ["imagegallery/jquery.imagegallery.css"],
+
+    "include": ["image.js",
+                "imagegallery/jquery.imagegallery.js"],
+
+    "init": "FileImage",
+
+    "locales": ["ru"]
+
+}

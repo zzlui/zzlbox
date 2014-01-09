@@ -1,0 +1,24 @@
+
+.zzlbox-progressbar.ui-progressbar {
+    position: relative;
+    text-align: center;
+    /*width: 80%;*/
+    margin: 5px auto;
+    overflow: hidden;
+}
+.zzlbox-progressbar .progressbar-text {
+    position: relative;
+    z-index: 10;
+    margin: 0.4em;
+    color: #363636;
+}
+.zzlbox-progressbar .ui-progressbar-value {
+    position: absolute;
+    top: 0;
+}
+
+.menu-icon-download {
+    background-image: url('/plugins/core/file/download-small.png') !important;
+    background-position: -4px 0px !important;
+    background-repeat: no-repeat !important;
+}

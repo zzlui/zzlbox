@@ -1,0 +1,25 @@
+#panel {
+    width: 175px;
+    overflow: hidden;
+    left: 0;
+    margin-left: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+#wrapper {
+    position: static;
+    padding: 0;
+    width: 100%;
+}
+
+#toolbar {
+    left: 180px;
+    right: 3px;
+}
+
+.panel-wrapper {
+    position: relative;
+    padding: 0 3px;
+    padding-left: 180px;
+}

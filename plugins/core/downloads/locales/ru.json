@@ -1,0 +1,10 @@
+{
+    "dls.downloads": "Загрузки",
+    "dls.description": "Показывает загрузки, процесс и т.п.",
+    "dls.fail_reason": "Причина ошибка",
+    "dls.status": "Статус",
+    "dls.active": "активные",
+    "dls.failed": "ошибки",
+    "dls.all": "все",
+    "dls.postproc": "Дополнительная обработка"
+}

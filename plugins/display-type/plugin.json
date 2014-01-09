@@ -1,0 +1,14 @@
+{
+    "name": "dt.label",
+    "description": "dt.desc",
+
+    "require": "core/files",
+
+    "css": "styles.css",
+
+    "include": "plugin.js",
+
+    "init": "DisplayType",
+
+    "locales": ["ru"]
+}

@@ -1,0 +1,14 @@
+
+.file-type-icon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.file-type-audio-icon {
+    background: url(audio-icon.png);
+}
+
+.file-type-video-icon {
+    background: url(video-icon.png);
+}

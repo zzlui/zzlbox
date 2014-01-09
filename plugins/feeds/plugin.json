@@ -1,0 +1,12 @@
+{
+    "name": "feeds.feeds",
+    "description": "feeds.desc",
+
+    "css": "styles.css",
+    "require": "core/files",
+
+    "include": "plugin.js",
+
+    "init": "Feeds",
+    "locales": ["ru"]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "search.lbl",
+    "description": "search.desc",
+
+    "css": "styles.css",
+
+    "require": "core/files",
+
+    "include": "plugin.js",
+
+    "init": "Metasearch",
+
+    "locales": ["ru"]
+}

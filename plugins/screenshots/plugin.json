@@ -1,0 +1,8 @@
+{
+    "name": "ss.label",
+    "description": "ss.desc",
+    "css": "styles.css",
+    "include": "plugin.js",
+    "init": "SS",
+    "locales": ["ru"]
+}

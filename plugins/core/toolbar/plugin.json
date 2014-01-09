@@ -1,0 +1,10 @@
+{
+    "name": "Toobar",
+    "description": "Toolbar for filters and actions",
+
+    "css": "styles.css",
+
+    "include": "plugin.js",
+
+    "init": "Toolbar"
+}

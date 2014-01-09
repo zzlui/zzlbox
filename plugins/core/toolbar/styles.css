@@ -1,0 +1,61 @@
+
+.zzlbox-button-icon .ui-icon-refresh {
+    background-image: url(refresh.png);
+}
+
+#toolbar {
+    padding: 3px 4px;
+    font-size: 0.7em;
+    font-weight: normal;
+    box-shadow: #DDD 2px 2px 2px;
+    z-index: 3;
+}
+
+#toolbar .group {
+    /*display: inline-block;*/
+    float: left;
+    margin: 0 2px;
+}
+
+#toolbar .title {
+    display: block;
+    font-weight: bold;
+}
+
+#toolbar .group.actions {
+    float: right;
+}
+
+#toolbar .zzlbox-button-icon-small.ui-button-icon-only {
+    /*width: auto;*/
+    height: auto;
+}
+
+.zzlbox-toolbar-button.ui-state-default,
+.zzlbox-toolbar-buttonset label.ui-state-default {
+    margin-right: -0.1em;
+    background: none;
+    border-color: transparent;
+    height: auto;
+    padding: 0 1px;
+}
+
+.zzlbox-toolbar-button.ui-state-default {
+    opacity: 0.8;
+}
+
+.zzlbox-toolbar-button.ui-state-hover {
+    opacity: 1.0;
+}
+
+.zzlbox-toolbar-button.ui-state-hover:active {
+    position: relative;
+    top: 1px;
+    left: 1px;
+}
+
+.zzlbox-toolbar-buttonset label.ui-state-active {
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    background: white;
+}

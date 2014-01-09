@@ -1,0 +1,15 @@
+{
+    "tor.label": "Торренты",
+    "tor.desc": "Подробная информация торрент скачек",
+    "tor.status": "Статус загрузки",
+    "tor.peers": "Пиры",
+    "tor.seeds": "Сидеры",
+    "tor.upspeed": "Скорость загрузки",
+    "tor.upsize": "Загружено",
+    "tor.search": "Искать в <b>Google</b>",
+    "tor.byname": "по имени",
+    "tor.or": "или",
+    "st.seeding": "сидирование",
+    "st.leeching": "загрузка",
+    "st.enqueueing": "в ожидании"
+}

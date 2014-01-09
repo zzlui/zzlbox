@@ -1,0 +1,17 @@
+{
+    "link.link": "Link",
+    "link.desc": "Link/Unlink files/feeds/dls",
+    "link.remove": "Remove",
+    "link.cancel": "Cancel",
+    "link.add": "Add",
+    "link.reload": "Reload",
+    "link.ready": "Ready to http download",
+    "link.not_ready": "Is not ready. Click to re-download",
+    "link.delete_qst_sel": "Remove selected items?",
+    "link.delete_qst_all": "Remove all items?",
+    "link.delete_warn": "These items will be permanently deleted and cannot be recovered. Are you sure?",
+    "link.checked": "checked",
+    "link.all": "all",
+    "link.click_to_rm":"Click to remove",
+    "link.click_to_add":"Click to add"
+}

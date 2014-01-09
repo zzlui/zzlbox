@@ -1,0 +1,90 @@
+<div class="center-wrapper">
+<div class="center form">
+    <div class="left">
+        <h4 class="ui-dialog-titlebar">${__('acc.change_pwd')}</h4>
+        <form id="account-change-pwd" action="/api/account/change_pwd">
+            <span>${__('acc.pwd_old')}</span><input type="password" name="old_pwd" required="required"/>
+            <span>${__('acc.pwd_new')}</span><input type="password" name="pwd" required="required"/>
+            <span>${__('acc.pwd_confirm')}</span><input type="password" name="re_pwd" required="required"/>
+            <input type="submit" value="${__('acc.change_pwd')}" />
+        </form>
+    </div>
+    <div class="right">
+        <h4>${__('acc.change_email')}</h4>
+        <form id="account-change-email" action="/api/account/change_email">
+            <span>${__('acc.email_old')}</span><input type="text" name="old_email" required="required"/>
+            <span>${__('acc.email_new')}</span><input type="text" name="email" required="required"/>
+            <span>${__('acc.email_confirm')}</span><input type="text" name="re_email" required="required"/>
+            <input type="submit" value="${__('acc.change_email')}" />
+        </form>
+    </div>
+    <div class="clear"></div>
+
+    <div class="left" id="full-moderated">
+        <h4>${__('acc.full_moderated')}</h4>
+        <ul>
+            <li>${__('acc.full_moderated_ignore_cat')}</li>
+            <li>${__('acc.full_moderated_ignore_keyword')}</li>
+            <li>${__('acc.full_moderated_hide_filter')}</li>
+        </ul>
+        <form id="account-change-mf" action="/api/account/save_prefs">
+            <div class="success" style="display:none"></div>
+            <span id="moderated_full">
+                <input type="radio" id="mf0" name="prefs_flags" value="moderated_full" /><label for="mf0">${__('acc.yes')}</label>
+                <input type="radio" id="mf1" name="prefs_flags" value="" /><label for="mf1">${__('acc.no')}</label>
+            </span>
+        </form>
+        <h4>${__('acc.theme')}</h4>
+        <form id="account-theme">
+            <span>${__('acc.theme_choose')}</span>
+            <select name="theme">
+                <option value="bootstrap">Twitter Bootstrap (${__('acc.default')})</option>
+                <option value="zzlbox">ZZLBox</option>
+                <option value="gmail">Gmail</option>
+                <option value="eggplant">Eggplant</option>
+                <option value="dark-hive">Dark Hive</option>
+                <option value="cupertino">Cupertino</option>
+                <option value="mint-choc">Mint Choc</option>
+                <option value="sunny">Sunny</option>
+            </select>
+        </form>
+        <span></span>
+    </div>
+    <div class="right">
+        <h4>${__('acc.ddl')}</h4>
+        <form id="account-change-ddl" action="/api/account/save_prefs">
+            <span>${__('acc.ddl_scheme')}</span>
+            <select name="dl_uri_scheme">
+                <option value="">[${__('acc.default')}]</option>
+                <option value="http">http</option>
+                <option value="https">https</option>
+            </select>
+            <span>${__('acc.ddl_host')}</span>
+            <select name="dl_uri_host">
+                <option value="">[${__('acc.default')}]</option>
+                <option value="gcdn.biz">gcdn.biz</option>
+                <option value="ip">ip</option>
+            </select>
+            <span>${__('acc.ddl_port')}</span>
+            <select name="dl_uri_port">
+                <option value="">[${__('acc.default')}]</option>
+                <option value="30084">30084</option>
+                <option value="30082">30082</option>
+            </select>
+            <span class="title">${__('acc.ddl_key')}</span>
+            <div style="width: 300px"><small><i>${__('acc.ddl_key_desc')}</i></small></div>
+            <input name="dl_uri_key" value="" />
+            <input type="submit" value="${__('acc.ddl_save')}" />
+        </form>
+    </div>
+    <div class="clear"></div>
+
+    <!--<div class="right" style="display: none">
+        <h4>Cancel account</h4>
+        <form id="account-cancel" action="/api/account/cancel">
+            <input type="submit" value="Cancel account" />
+        </form>
+    </div>
+    <div class="clear"></div>-->
+</div>
+</div>

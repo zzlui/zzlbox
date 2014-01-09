@@ -1,0 +1,156 @@
+
+.zzlbox-button-icon .ui-icon-display-table {
+    background-image: url(display-table.png);
+}
+
+.zzlbox-button-icon .ui-icon-display-list {
+    background-image: url(display-list.png);
+}
+
+.zzlbox-button-icon .ui-icon-display-grid {
+    background-image: url(display-grid.png);
+}
+
+#file-list .file .name {
+    padding: 2px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+/* grid view */
+
+.actions > span, .actions > a {
+    vertical-align: middle;
+}
+
+.display-type.grid .file {
+    width: 250px;
+    height: 250px;
+    min-width: 180px;
+    min-height: 170px;
+    max-width: 300px;
+    /*float: left;*/
+    display: inline-block;
+    font-size: 0.7em;
+    margin: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+    position: relative;
+}
+
+/* --> TODO move to labels */
+.display-type.grid .file .labels {
+    display: block;
+    margin: 2px 0;
+    margin-left: 0 !important;
+}
+/* <-- end TODO move */
+
+.display-type.grid .file .addons {
+    margin: 5px auto;
+    overflow: hidden;
+}
+.display-type.grid .file:hover .addons {
+    /*height: auto;*/
+}
+
+.display-type.grid .file .actions {
+    position: absolute;
+    bottom: 5px;
+    text-align: right;
+    background: #FFD;
+    width: 250px;
+    display: none;
+    padding-top: 3px;
+}
+
+.display-type.grid .file:hover .actions {
+    display: block;
+}
+
+.display-type.grid .file:hover {
+    /*width: auto;
+    height: auto;
+    position: absolute;
+    white-space: normal;
+    border-width: 2px;
+    z-index: 10;*/
+}
+
+/* list view */
+.display-type.list .file {
+    /*position: relative;*/
+}
+
+.display-type.list .file .actions {
+    float: right;
+}
+
+.display-type.list .file .main {
+    margin: 5px 0;
+}
+
+/* table view */
+.display-type.table {
+    display: table;
+    width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    border: none !important;
+    border-style: solid;
+    /*table-layout: fixed;*/
+}
+
+.display-type.table .file .addons,
+.display-type.table .file .addons-link {
+    display: none;
+}
+
+.display-type.table .file {
+    display: table-row;
+    width: 100%;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.display-type.table .file .name,
+.display-type.table .file .main,
+.display-type.table .file .actions {
+    display: table-cell;
+    padding: 4px 7px !important;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.display-type.table .file .name {
+    width: 100%;
+    overflow: hidden;
+    max-width: 1px; /* hack that allow to decrease first collumn size with table wrapper size */
+    white-space: normal;
+}
+
+.display-type.table .file .main {
+    font-size: 0.8em;
+    /*min-width: 145px;*/
+}
+
+.display-type.table .file .main > span {
+    display: block;
+}
+
+.display-type.grid .file .main > span:after,
+.display-type.list .file .main > span:after {
+    content: ',';
+}
+
+.display-type.list .file .main > span:last-child:after {
+    content: '';
+}
+
+.display-type.grid .grid-hidden,
+.display-type.table .table-hidden,
+.display-type.list .list-hidden {
+    display: none;
+}

@@ -1,0 +1,10 @@
+{
+    "name": "Navigation",
+    "description": "Navigation bar",
+
+    "css": "styles.css",
+
+    "include": "plugin.js",
+
+    "init": "Navigation"
+}

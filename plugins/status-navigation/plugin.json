@@ -1,0 +1,8 @@
+{
+    "name": "Filter by status",
+    "description": "Add status links in navigation instead toolbar filter",
+
+    "include": "plugin.js",
+
+    "init": "FilterStatus"
+}

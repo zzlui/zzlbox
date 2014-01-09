@@ -1,0 +1,20 @@
+The ZZLBox frontend license.
+
+Terminology.
+The ZZLBox project consists of the two main parts:
+ * Backend. Server side app. Propiatary code. No plans to release it.
+ * Frontend. Javascript based. This license is for it.
+ 
+You're free to fork this code and do whatever your want with as long as the following conditions are met:
+ * The main purpose of your work is to extend/imporove the basic functionality of ZZLBox frontend. 
+ * The application connects to ZZLBox servers only in order to get files to download/stream. Other media such as detailed info or torrent metafiles can be fetched from any source. I.e. you cannot create a clone of zzlbox server app and use this frontend.
+ * All source code is open, documented and available through a git based repository such as github.com
+
+If in doubt please ask ZZLBox admin first.
+
+For everything else default copyright law apply.
+
+
+
+
+

@@ -1,0 +1,14 @@
+{
+    "name": "link.link",
+    "description": "link.desc",
+
+    "css": "styles.css",
+
+    "require": "core/files",
+
+    "include": "plugin.js",
+
+    "init": "FileLink",
+
+    "locales": ["ru"]
+}

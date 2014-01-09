@@ -1,0 +1,14 @@
+{
+    "err.label": "Error",
+    "err.desc": "Display API and/or requests error",
+    "err.404": "Not found",
+    "err.api": "API error",
+    "err.req": "Request error",
+    "err.err": "Report error",
+    "err.errdesc": "An error has occurred in ZZLBox",
+    "err.senddesc": "Please send us this report and we will try to fix it",
+    "err.view": "View information that will send",
+    "err.reset": "Reset plugins settings",
+    "err.send": "Send report",
+    "err.ignore": "Ignore"
+}

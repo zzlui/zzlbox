@@ -1,0 +1,13 @@
+{
+    "name": "err.label",
+    "description": "err.desc",
+    "locales": ["ru"],
+
+    "include": "plugin.js",
+
+    "init": "Errors",
+
+    "routes": {
+        "404": "NotFound"
+    }
+}

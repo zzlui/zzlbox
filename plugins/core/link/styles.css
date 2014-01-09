@@ -1,0 +1,28 @@
+
+
+.ui-button.zzlbox-button-icon .ui-button-icon-primary.ui-icon-remove {
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    margin-left: -4px;
+}
+
+.zzlbox-button-icon .ui-icon-remove {
+    background-image: url(remove.png);
+}
+
+.zzlbox-button-icon .ui-icon-add {
+    background-image: url(add.png);
+}
+.zzlbox-button-icon.zzlbox-button-icon-small .ui-icon-add {
+    background-image: url(add-small.png);
+}
+
+.is_ready {
+    display: inline-block;
+    margin-right: 0.2em;
+    width: 28px;
+    height: 28px;
+    background: url('img/is_ready.png') transparent 2px 2px no-repeat;
+    vertical-align: bottom;
+}

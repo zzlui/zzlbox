@@ -1,0 +1,10 @@
+{
+    "media.label": "Media files",
+    "media.desc": "Media files information. Play button.",
+    "media.vlc": "Play in VLC",
+    "media.supportwarn": "Only {0} out of {1} files are supported by Flash player. Use VLC to watch other files.",
+    "media.play": "Play all",
+    "media.playone": "Play",
+    "media.add": "Add all to playlist",
+    "media.addone": "Add to playlist"
+}

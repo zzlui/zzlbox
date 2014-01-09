@@ -1,0 +1,22 @@
+<div class="ui-state-default ui-list-item">
+    {{if state}}{{else}}
+        <span class="ui-state-disabled">[${__('acc.addon')}]</span>
+    {{/if}}
+    <span class="title">${name}</span>
+    {{if state}}
+        <b class="special">(${state})</b>
+    {{/if}}
+    <div class="main">
+        {{if ctime}}${__('acc.date')}: {{html $(ctime).fileDate()}},{{/if}}
+        ${__('acc.pay_type')}: ${__(billing||'acc.by_adm')}{{if price}},{{/if}}
+        {{if price}}${__('acc.amount')}: <b>${price}</b> ${currency}{{/if}}{{if from_dt}},{{/if}}
+        {{if from_dt}}
+            ${__('acc.period')}: {{html $(from_dt).fileDate()}} -
+            {{if name == 'LIFETIME'}}
+                 &infin;
+            {{else}}
+                {{html $(to_dt).fileDate()}}
+            {{/if}}
+        {{/if}}
+    </div>
+</div>

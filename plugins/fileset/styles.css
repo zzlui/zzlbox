@@ -1,0 +1,54 @@
+
+.fileset {
+    overflow: hidden;
+    padding-top: 3px;
+}
+
+.fileset li.file {
+    white-space: nowrap;
+}
+
+.fileset li.file span {
+    display: inline-block;
+}
+
+.fileset li.file .main {
+    position: relative;
+}
+
+.fileset li.file.addons-on-hover .addons {
+    display: none;
+}
+
+.fileset li.file.addons-on-hover:hover .addons {
+    display: block;
+}
+
+.fileset li.file.addons-on-hover .addons:hover {
+    display: none !important;
+}
+
+.fileset li.file .actions {
+    position: absolute;
+    top: -5px;
+    left: 3px;
+    display: none;
+}
+
+.fileset li.file:hover .actions {
+    display: inline-block;
+}
+
+.ui-icon-expand-all, .ui-icon-collapse-all {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.ui-icon-expand-all {
+    background-image: url('expand-all.png');
+}
+
+.ui-icon-collapse-all {
+    background-image: url('collapse-all.png');
+}

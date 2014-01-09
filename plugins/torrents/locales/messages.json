@@ -1,0 +1,17 @@
+{
+    "tor.label": "Torrents",
+    "tor.desc": "Torrents files information",
+    "tor.status": "Active status",
+    "tor.peers": "Peers",
+    "tor.seeds": "Seeders",
+    "tor.upspeed": "Upload speed",
+    "tor.upsize": "Upload size",
+    "tor.search": "Search on <b>Google</b>",
+    "tor.byname": "by name",
+    "tor.or": "or",
+    "tor.info_hash": "info_hash",
+
+    "st.seeding": "seeding",
+    "st.leeching": "leaching",
+    "st.enqueueing": "enqueueing"
+}

@@ -1,0 +1,20 @@
+<div class="ui-state-default ui-list-item"{{if group && group == 'core' && !DEBUG}} style="display:none;"{{/if}}>
+    {{if group && group == 'core' && !DEBUG}}
+        <span class="right ui-state-disabled">CORE</span>
+    {{else}}
+    <span class="right plugins-enable-buttonset">
+        <input type="radio" name="plugin-${id}" id="plugin-${id}-1" value="1" />
+        <label for="plugin-${id}-1">${__('acc.enable')}</label>
+        <input type="radio" name="plugin-${id}" id="plugin-${id}-0" value="0" checked="checked" />
+        <label for="plugin-${id}-0">${__('acc.disable')}</label>
+    </span>
+    {{/if}}
+    {{if group}}<span class="ui-state-disabled">[${group}]</span>{{/if}}
+    <span class="title">${name}</span>
+    <span class="ui-state-disabled">(${id})</span>
+    {{if error}}
+        <div class="error" style="clear:both; margin-top: 8px;">${error}</div>
+    {{/if}}
+    <div>${description}</div>
+    <div class="clear"></div>
+</div>

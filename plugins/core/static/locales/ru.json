@@ -1,0 +1,30 @@
+{
+    "s.acc": "Аккаунт",
+    "s.plugins": "Плагины и утилиты",
+    "s.support": "Поддержка",
+    "s.about": "О Нас",
+    "s.legal": "Правила",
+
+    "s.pricing": "Цены",
+    "s.buye": "Купить еще траффик",
+    "s.edit": "Редактировать профайл",
+    "s.plugins": "Плагины",
+
+    "s.players": "VLC и KMPlayer",
+    "s.mc": "Медиа центры (XBMC, PS3, XBOX)",
+    "s.browsers": "Firefox и Chrome",
+    "s.ts": "Перекодирование видео (iPhone/iPad)",
+    "s.api": "Открытое API",
+    "s.papi": "API Плагинов",
+
+    "s.faq": "Поддержка и FAQ",
+    "s.speed": "Как увеличить скорость",
+
+    "s.contacts": "Контакты",
+    "s.twitter": "Написать нам в Twitter",
+    "s.facebook": "Присоединится на Facebook",
+
+    "s.terms": "Уловия предоставления услуг",
+    "s.privacy": "Защита информации",
+    "s.dmca": "DMCA"
+}

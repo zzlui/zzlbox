@@ -1,0 +1,12 @@
+{
+    "name": "check.label",
+    "description": "check.desc",
+
+    "require": "core/files",
+
+    "include": "plugin.js",
+
+    "init": "CheckAll",
+
+    "locales": ["ru"]
+}

@@ -1,0 +1,7 @@
+{
+    "name": "Panel",
+    "description": "Left/Right panel for navigation and/or other info",
+    "css": "styles.css",
+    "include": "plugin.js",
+    "init": "Panel"
+}

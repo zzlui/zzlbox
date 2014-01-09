@@ -1,0 +1,7 @@
+{
+    "dt.label": "Display type",
+    "dt.desc": "Allow to change list display type (table/greed/list)",
+    "dt.table": "Table view",
+    "dt.grid": "Grid view",
+    "dt.list": "List view"
+}

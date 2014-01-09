@@ -1,0 +1,20 @@
+{
+    "add.add": "Add",
+    "add.desc": "Add files, torrents, feeds",
+    "add.file_add": "File add",
+    "add.files_add": "Add files(s)",
+    "add.f_remote": "by <b>remote</b> URL to .torrent file, info_hash or magnet link",
+    "add.f_local": "or by <b>local</b> .torrent file",
+    "add.f_notify": "Send an email notification when a file is ready",
+    "add.feed_add": "Feed add",
+    "add.add_feed": "Add feed",
+    "add.r_name": "Name",
+    "add.r_name_l": "as it will be shown in the feeds list",
+    "add.r_url": "Url",
+    "add.r_url_l": "If you provide only a name the url will be auto-generated using eztv's search",
+    "add.pub_after": "Add items published after this date",
+    "add.pub_ep": "Add only episodes higher or equal to",
+    "add.pub_ex": "ex. S01E02 or just 102",
+    "add.yes": "Yes",
+    "add.no": "No"
+}

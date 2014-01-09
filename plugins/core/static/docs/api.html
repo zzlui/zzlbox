@@ -1,0 +1,320 @@
+<h1>Plugins API</h1>
+
+You can create your own custom plugin that extend zzlbox functionality. To do this you shuld use api following. Then place your plugin folder on your webv-server and add url to plugin on zzlbox plugins page. Plase <u>note</u> that you should enable cross-origin-xhr header for all plugin files. You can read on <a href="http://enable-cors.org/" target="_blank">enable-cors.org</a> website hot to do this.
+
+<h2><a name="folder"></a>Plugin folder</h2>
+
+Your plugin folder should contains <a href="#json">plugin.json</a> file with your plugin information and <a href="#locales">locales</a> folder (in case if you want translate your plugin).
+You can place there any file that you want.
+You can use all sorts off <a href="#hooks">hooks</a>, <a href="#events">events</a> and other features in your plugin.
+
+<h2><a name="json"></a>plugin.json</h2>
+
+<pre>
+{
+    "name": "Plugin name",
+    "description": "Plugin description",
+    "locales": [...], // avalable <a href="/docs/locales">locales</a>
+    "tpl": [...], // templates that should be loaded
+    "require": [...], // required plugins
+    "css": [...], // css files that should be included
+    "include": [...], // js files that should be included
+    "init": "PluginClassName", // plugin class name that will be init after included all js/css files, locales and templates
+    "routes": { // plugin routes
+        "/some/url/*path": "ViewName", // wich <a href="/docs/views">View</a> should be loaded for this url
+        "/some/any/url": "#/redirect/url" // you can redirect some urls
+    }
+}
+</pre>
+
+<h2>Plugin class</h2>
+
+If you want to initialize some class after all plugin locales, templates and requires loaded you can create plugin class and use 'init' attribute in your <a href="#json">plugin.json</a>
+
+<pre>
+ZZLBox.Plugins.PluginClassName = ZZLBox.Plugin.extend({
+    initialize: function() {
+        // you can bind your hooks here, attach events, add navigation and/or initialize some blocks on page
+        // this.url == plugin url
+    },
+});
+</pre>
+
+<h2>View</h2>
+
+You can associate your views with urls use 'routes' attribute in <a href="#json">plugin.json</a>.
+Please note that your own routes will replace the same routes already added.
+
+<pre>
+ZZLBox.Views.ViewName = ZZLBox.View.extend({
+    tpl: [...], // view templates, first template will load on view render, nut you van also rewrite render and remove methods
+
+    initialize: function() {
+        // ...
+        // this.el - element where view content should be placement (usually #content)
+        // this.rendered  - indicate is this view now is rendered
+    },
+
+    onAfterRender: function() {
+        // method that will init after view and their template rendered
+    }
+})
+</pre>
+
+<h2>Model</h2>
+
+Models can be used for easy manipulation with your data, such as files, feeds, etc
+
+<pre>
+ZZLBox.Models.ModelName = ZZLBox.Model.extend({
+
+    defaults: {
+        // default values for model atributes
+    },
+
+    initialize: function() {
+        // ...
+    },
+});
+</pre>
+
+<h2>Collection</h2>
+
+Collections can be used to easy manipulate with sets of your models.
+
+<pre>
+ZZLBox.Collections.CollectionName = ZZLBox.Collection.extend({
+
+    model: ZZLBox.Models.ModelName, // collection model class
+
+    initialize: function() {
+        // ....
+    },
+
+    _read: function(o) {
+        // here your should write your own sync with server
+        // o == {
+        //      success: function() {...},
+        //      error: function() {...},
+        // }
+        // you should run success callback on sync complete and error on errors
+    },
+
+    onAfterRead(data) {
+        // this method call after xhr has read data from the server. you can modify this data here before load to collection
+    }
+});
+</pre>
+<h3>Methods</h3>
+<pre>
+zzlbox.collections.CollectionName.fetch(); // fetch data from the server, initialize _read method
+zzlbox.collections.CollectionName.toJSON(); // get JSON set of your data
+</pre>
+more methods you can read in <a href="http://documentcloud.github.com/backbone/#Collection">backbone.js documentation</a>
+
+<h3>Files collection</h3>
+
+Files collection is extended ZZLBox collection that adapted for work with <a href="/t/api">ZZLBox Open API</a>
+
+<pre>
+ZZLBox.Collections.FilesCollectionName = ZZLBox.Collections.FilesAbstract.extend({
+
+    uri: '/api/uri', // api uri
+
+    filters: {
+        // available filters, it will aftomatically shows in toolbar
+        filterID: {
+            name: 'Some filter', // name that will be shows in toolbar
+            default: '', // default value
+            type: 'select', // text/select/num/radio
+            values: { // for select and radios
+                valID: 'value name',
+                ...
+            }
+        },
+        ...
+    }
+
+});
+</pre>
+
+<h2><a name="#hooks"></a>Hooks and Events</h2>
+
+Hooks can be used when some content is rendering/rerendering and need to update by other plugins.
+You can init your own hooks in plugin:
+
+<pre>
+zzlbox.plugins.hook('hook-name', item, someData1, someData2, ...);
+</pre>
+
+You should provide unique hook name. All other arguments you can set how your like it, but we strongly recomended use item (that was updated) as first argument. In hook arguments you can place some additional data such as model, collection, etc.
+
+Then you, or other plugins, can bind for your hook:
+<pre>
+zzlbox.plugins.bind('hook-name', function(item, someData1, someData2, ...) {
+    // this == context
+}, context);
+</pre>
+
+You can also triger some custom events in your plugin use 'trigger' method code:
+
+<pre>
+zzlbox.plugins.YourPluginName.trigger('event-name', e, ...);
+</pre>
+
+And then bind for event use 'bind' method: 
+<pre>
+zzlbox.plugins.SomePluginThatFiresTheEvent.bind('event-name', function(e) {
+    // this == context
+}, context);
+</pre>
+
+You can use all sort of build-in into zzlbox hooks and events that are described bellow.
+
+<h2>Router</h2>
+<h3>Events</h3>
+<pre>
+// trigered when location and/or query in the adress bar changed for specified View
+zzlbox.router.trigger('query:ViewName', chunks, query);
+// trigered when active view has changed
+zzlbox.router.trigger('change:view', name[1]);
+// trigered when refresh is initialized (by refresh button or by zzlbox.router.refresh method)
+zzlbox.router.trigger('router-refresh');
+// you can also bind on all changes in router
+zzlbox.router.trigger('all');
+</pre>
+<h3>Methods</h3>
+<pre>
+// add route. usually you don't need use this method, you should add your routes in <a href="#json">plugin.json</a>
+zzlbox.router.add(fragment, view, callback);
+// navigate to custom fragments. you can use this for buttons but for link more usually way is use zzlbox.router.links method
+zzlbox.router.navigate(fragment);
+// find all links inside node and wrap it's with zzlbox.router.navigate method. also wrap node if it is link
+zzlbox.router.links(node);
+// refresh router, init all events again
+zzlbox.router.refresh();
+// update location fragment, but don't change query
+zzlbox.router.updatePath(path);
+// update location query and also path if specified. that all queryes will extend current active query
+zzlbox.router.updateQuery(query[, path]);
+// like updateQuery, but replaced all current queryes
+zzlbox.router.setQuery(query[, path]);
+// get current fragment. if full==true returns fragment with query
+zzlbox.router.getFragment(full)
+</pre>
+<h3>Properties</h3>
+<pre>
+// navigation history
+zzlbox.router.history
+// current active view
+zzlbox.router.view
+// current query
+zzlbox.router.query
+// current fragment chunks
+zzlbox.router.chunks
+</pre>
+
+<h2>Files list page</h2>
+
+<h3>Hooks:</h3>
+<pre>
+// hook to update main information
+zzlbox.plugins.hook('main', item, model);
+// hook to update and/or add your own actions
+zzlbox.plugins.hook('actions', item, model, 'filelist');
+// hook to update additional information
+zzlbox.plugins.hook('addons', item, model);
+// hook that calls after files item is added
+zzlbox.plugins.hook('files-add-one', item, model);
+// hook that calls when part of files items was added
+zzlbox.plugins.hook('files-add', collection, list, models);
+// hook that calls when files append append to document
+zzlbox.plugins.hook('files-append', item, list, models);
+</pre>
+
+<h3>Events</h3>
+<pre>
+// trigered when collection changed
+zzlbox.plugins.Files.trigger('change:collection', collection, oldCollection);
+</pre>
+
+<h3>Methods:</h3>
+<pre>
+// add collection that will be used for specified routes
+zzlbox.plugins.Files.addCollection(collection, routes);
+// get item node by item model
+zzlbox.plugins.Files.getItemByModel(model);
+// get all checked items models or, if returlEl==true, nodes
+zzlbox.plugins.Files.checked(returnEls);
+</pre>
+
+<h2>File page</h2>
+<h3>Hooks:</h3>
+<pre>
+// add actions for file
+zzlbox.plugins.hook('actions', item, model, 'fileinfo');
+// add information of file
+zzlbox.plugins.hook('file-info', item, model);
+// additional information
+zzlbox.plugins.hook('file-additional-info', item, model);
+// use this hook to get full file page and improve it
+zzlbox.plugins.hook('file-page', item, model);
+</pre>
+
+<h2>Fileset</h2>
+If file object containts fileset (like torrents), fileset displays tree of files/folder on file page
+<h3>Hooks:</h3>
+<pre>
+// use this hook to add actions for all fileset items
+zzlbox.plugins.hook('fileset-actions-all', item, model, files, tree);
+// use this hook to add actions for each folder in fileset
+zzlbox.plugins.hook('fileset-actions-folder', item, model, files, tree);
+// main info of fileset item
+zzlbox.plugins.hook('fileset-info-main', item, model, file);
+// additional info
+zzlbox.plugins.hook('fileset-info-addons', item, model, file);
+// actions hook
+zzlbox.plugins.hook('fileset-actions-item', item, model, file);
+// item hook
+zzlbox.plugins.hook('fileset-item', item, model, file);
+</pre>
+
+<h2><a name="#toolbar"></a>Toolbar</h2>
+
+<h3>Hooks:</h3>
+<pre>
+// use this hook to improve toolbar
+zzlbox.plugins.hook('toolbar', toolbarObject);
+</pre>
+<h3>Methods:</h3>
+<pre>
+// add item to group, create group if doesn't exists
+toolbarObject.add(item, title[, order, group, groupOrder]);
+</pre>
+
+<h2>Navigation</h2>
+<h3>Hooks:</h3>
+<pre>
+// use this hook to improve navigation
+zzlbox.plugins.hook('navigation', toolbarObject);
+</pre>
+
+<h2>Panel</h2>
+<h3>Hooks:</h3>
+<pre>
+// use this hook to improve left panel
+zzlbox.plugins.hook('panel', toolbarObject);
+</pre>
+
+<h2><a name="locales"></a>Locales</h2>
+
+For translate your plugin you should add list of availbale locales in your <a href="/docs/api#json">plugin.json</a> and add locales folder into your <a href="/docs/api#folder">plugin folder</a>
+
+<pre>
+locales/messages.json - default locale messages, usually 'en'
+locales/ru.json - ru locale
+locales/de.json - de locale
+...
+</pre>
+
+

@@ -1,0 +1,354 @@
+#footer .copyright {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    font-size: 0.7em;
+}
+
+.static-page {
+    /*box-shadow: #DDD -1px 0px 2px;*/
+    /*border: 1px solid #DDD;*/
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.footer-menu {
+    font-size: 0.8em;
+}
+
+.footer-menu div {
+    vertical-align: top;
+    display: inline-block;
+    text-align: left;
+    margin: 0 15px;
+}
+
+.footer-menu div.footer-menu-account {
+    display: none;
+}
+#footer.collapsible .footer-menu div.footer-menu-account {
+    display: inline-block;
+}
+
+.footer-menu ul {
+    padding-left: 16px;
+    list-style-type: square;
+
+    max-height: 150px;
+    margin: 5px 0;
+
+    overflow: hidden;
+
+    -webkit-transition: .2s linear .2s;
+    -moz-transition: .2s linear .2s;
+    -o-transition: .2s linear .2s;
+    -ms-transition: .2s linear .2s;
+    transition: .2s linear .2s;
+    /*margin-bottom: 20px;*/
+}
+
+#footer.collapsible {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    bottom: 0;
+}
+
+#footer.collapsible .footer-menu ul {
+    margin: 0;
+    max-height: 0px;
+}
+
+#footer.collapsible:hover .footer-menu ul {
+    max-height: 150px;
+    margin: 5px 0;
+}
+
+.footer-menu a.dmca {
+    color: red;
+}
+
+/* =======================================
+    some FURK styles
+   ======================================== */
+.static-page .left-half {
+    margin: 5px 0px 10px 0px;
+    display: inline;
+    width: 47%;
+    float: left;
+    clear: left;
+}
+.static-page .right-half {
+    margin: 5px 0px 10px 0px;
+    display: inline;
+    width: 47%;
+    float: right;
+    clear: right;
+}
+.static-page .wide {
+    width: 100%;
+    clear: both;
+}
+/* end */
+
+/* text */
+.static-page p.large {
+    font-size: larger;
+    font-weight: bold;
+    color: #666;
+    margin: 1em;
+
+}
+.static-page small {
+    font-size: x-small;
+    color: #666;
+}
+/* end text */
+
+.static-page fieldset {
+    background: #fff;
+    border: 1px solid #bbb;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    text-align: left;
+    padding: 10px;
+    width: auto;
+    margin-bottom: 10px;
+
+}
+
+.static-page legend, .static-page strong {
+    font-weight: bold;
+    color: #666;
+
+}
+.static-page legend {
+    border: 1px solid #bbb;
+    -moz-border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    margin: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    background: #edeff1;
+    color: #666;
+}
+
+.static-page .hard-break {
+    white-space: pre-wrap; /* css-3 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.static-page h1,
+.static-page h2,
+.static-page h3,
+.static-page h4 {
+    text-align: center;
+    color: #666;
+    font-family: 'Trebuchet MS', Verdana, Sans-Serif;
+    font-weight: normal;
+    text-shadow: #dddddd 2px 2px 2px;
+}
+
+.static-page caption {
+    font-weight: bold;
+    /*font: normal;*/
+    color: #666;
+}
+
+.static-page ul.faq li {
+    margin: 1em;
+}
+.static-page ul.faq b {
+    font-size: large;
+}
+.static-page li.faq {
+    margin: 1em;
+}
+.static-page li.faq b {
+    display: block;
+}
+.static-page .faq h1, .static-page .faq h2, .static-page .faq h3  {
+    text-align: left;
+}
+
+.static-page dt {
+    font-weight: bold;
+    color: #666;
+}
+.static-page dd {
+    padding-bottom: 0.8em;
+}
+
+.static-page img.link:hover {
+    background-color: #fff;	
+}
+
+/* forms & buttons */
+.button-large { /*, input[type="submit"].button-large, input[type="button"].button-large, input[type="file"].button-large {*/
+    font-size: large;
+    font-weight: bold;
+    color: #fff;
+    background-color: #069f00;
+    padding: 4px 12px 4px 12px;
+    border: 2px solid #ccc;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 200%;
+}
+
+.button-large:hover { /*, input[type="submit"].button-large:hover, input[type="button"].button-large:hover, input[type="file"].button-large:hover { */
+    text-decoration: underline;
+    background-color: #238bce;	
+    color: #fff;
+}
+
+/* FF wants this */
+.button-large, input[type="submit"].button-large, input[type="button"].button-large, input[type="file"].button-large {
+    text-decoration: none;
+    background-color: #069f00;
+    color: #fff;
+}
+/* FF wants this */
+.button-large:hover , input[type="submit"].button-large:hover, input[type="button"].button-large:hover, input[type="file"].button-large:hover {
+    text-decoration: underline;
+    background-color: #238bce;
+    color: #fff;
+}
+.button-play { 
+    color: #fff;
+    background-color: #238bce;	
+    border-color: #ccc;
+}
+
+.button-dl {
+    background-image: url('/img/button-dl.png');
+    background-repeat: no-repeat;
+    width: 322px;
+    height: 37px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 6px 10px 6px 5px;
+    overflow: hidden;
+}
+.button-dl h1 {
+    display: block;
+    font-size: 27px;
+    font-weight: bold;
+    color: #fff;
+    margin: 1px 5px 2px 5px;
+    padding: 0px;
+    text-align: left;
+}
+
+.button-premium-star {
+    color: #FDD017;
+}
+
+.static-page span.api_key {color:red; text-width: bold;}
+.static-page h3.api {font-weight: bolder}
+.static-page div.api {padding-left: 10px;}
+.static-page div.api_code {border: 1px solid #CCC; margin: 10px; -moz-border-radius: 6px; -webkit-border-radius: 6px; text-width: bold; }
+
+/* end forms & buttons */
+
+.static-page .vert-row {
+    width: 2px;
+    height: 15em;
+    background-color: #bbb;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+table.premium-footer {
+    width: 100%;
+}
+table.premium-footer td {
+    width: 25%;
+    border-right: 1px dotted gray;
+    border-left: 1px dotted gray;
+    font-weight: bold;
+    color: #666;
+    padding: 20px;
+}
+
+
+table.prices {
+    
+}
+table.prices td {
+    margin: 1em;
+}
+
+.price-cont {
+    background-color: #238bce;	
+    padding: 4px;
+    border: 1px solid #cecece;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+.price-cont:hover {
+    outline: 6px solid #cecece;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+}
+.price-cont-popular {
+    background-color: #ff6000;
+}
+.price-box {
+    background-color: #fff;
+    display: block;
+    width: 135px;
+    border: 1px solid #cecece;
+    margin: 0px;
+    padding: 6px 3px 0px 3px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    text-align: center;
+    position: relative;
+}
+.price-cont-popular .price-box {
+    background-color: #fff2c7;
+}
+.price-box h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 0px;
+}
+.price-box h2 {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 0px;
+    background: #cecece;
+    color: #000;
+}
+.price-box h3 {
+    margin: 0px;
+    font-weight: bold;
+}
+.price-box .billing-icon {
+    margin-bottom: 1em;
+}
+.price-box .billing-icon:hover {
+    outline: 3px solid #cecece;
+}
+.price-box .billing-cont {
+    margin-top: 2px;
+}
+.price-box .billing-cont:hover {
+    outline: 3px solid #cecece;
+}
+
+/* end price boxes */
+

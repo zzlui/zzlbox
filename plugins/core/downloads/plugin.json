@@ -1,0 +1,14 @@
+{
+    "name": "dls.downloads",
+    "description": "dls.description",
+
+    "css": "styles.css",
+
+    "require": "core/files",
+
+    "include": "plugin.js",
+
+    "init": "Downloads",
+
+    "locales": ["ru"]
+}

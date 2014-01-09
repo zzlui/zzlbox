@@ -1,0 +1,119 @@
+
+.zzlbox-button-icon .ui-icon-vlc {
+    background-image: url(vlc.png);
+}
+
+.zzlbox-button-icon.zzlbox-button-icon-small .ui-icon-vlc {
+    /*background-image: url(vlc-small.png);*/
+    background-image: url(play-vlc.png);
+}
+
+.zzlbox-button-icon .ui-icon-play {
+    background-image: url(play.png);
+}
+.zzlbox-button-icon.zzlbox-button-icon-small .ui-icon-play {
+    background-image: url(play-small.png);
+}
+
+#jplayer.audio-play,
+#jplayer-player.hidden #jplayer {
+    height: 1px !important;
+}
+
+#jplayer-gui.audio-play .jp-full-screen,
+#jplayer-gui.audio-play .jp-restore-screen {
+    visibility: hidden;
+}
+
+#jplayer-player {
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    /*border: 1px solid navy;
+    padding: 5px;*/
+
+    box-shadow: #999 2px 2px 2px;
+}
+
+#jplayer-player.hidden {
+    bottom: -100px;
+}
+
+#jplayer-player .loader {
+    float: left;
+    clear: left;
+    margin-left: 12px;
+}
+
+#jplayer-playlist {
+    /*display: none;*/
+}
+
+.jp-playlist .jp-playlist-item {
+    white-space: nowrap;
+}
+
+.jp-playlist ul li {
+    text-overflow: clip;
+    white-space: nowrap;
+    padding: 4px 0 !important;
+    margin: 0 !important;
+}
+
+.jp-playlist ul li.jp-playlist-current {
+    margin: -1px -20px 0 !important;
+    padding: 5px 20px 4px !important;
+}
+
+#jplayer-player .jp-title {
+    display: block !important;
+    white-space: nowrap;
+}
+
+#jplayer-player .jp-playlist {
+    max-height: 200px;
+    overflow: auto;
+}
+
+#jplayer-player .jp-playlist,
+/*#jplayer-player .jp-jplayer,*/
+#jplayer-player .jp-controls-holder {
+    display: none;
+}
+
+#jplayer-player:hover .jp-playlist,
+/*#jplayer-player:hover .jp-jplayer*/
+#jplayer-player:hover .jp-controls-holder {
+    display: block;
+}
+
+.jp-playlist span.jp-free-media,
+.jp-playlist a.jp-playlist-item-remove {
+    position: relative;
+    background: #3A2A45;
+    padding-left: 10px;
+    margin-left: 0 !important;
+}
+
+.jp-playlist .jp-playlist-current span.jp-free-media,
+.jp-playlist .jp-playlist-current a.jp-playlist-item-remove {
+    background: #26102E;
+}
+
+.jp-playlist li:first-child {
+    border-top: 1px solid transparent !important;
+}
+.jp-playlist li:last-child {
+    border-bottom: 1px solid transparent !important;
+}
+.jp-progress {
+    margin: 4px 0 0;
+    border-bottom: none;
+    border-top: 1px solid #554560;
+}
+
+.jp-playlist {
+    border-bottom: 1px solid #554560;
+    box-shadow: inset #554560 0 0 2px;
+    margin-bottom: 5px;
+}

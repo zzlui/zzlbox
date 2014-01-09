@@ -1,0 +1,17 @@
+{
+    "img.label": "Images slideshow",
+    "img.desc": "Show slideshow for images fileset",
+    "img.slideshow": "Slideshow",
+    "img.slideshowdesc": "Slideshow all images",
+    "img.fittoscreen": "Toggle Fit-to-Screen",
+    "img.thumbs": "Show/Hide thumbnails container",
+    "img.preview": "Toggle peviews in thumbnails container",
+    "img.previewwarn": "This option can load your CPU!",
+    "img.albums": "Show albums",
+    "img.prev": "Previous image",
+    "img.next": "Next image",
+    "img.play": "Play slideshow (5 sec delay)",
+    "img.pause": "Pause slideshow",
+    "img.dl": "Link to original image",
+    "img.exit": "Close slideshow"
+}
