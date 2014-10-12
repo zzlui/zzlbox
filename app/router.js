@@ -42,6 +42,7 @@ ZZLBox.Router = Backbone.Router.extend({
                     zzlbox.router.view = name[1];
                     zzlbox.router.trigger('change:view', name[1]);
                 }
+
             }
         });
 
@@ -90,6 +91,15 @@ ZZLBox.Router = Backbone.Router.extend({
 
     updatePath: function(path) {
         this.navigate(path + this.formatQuery());
+    },
+
+    // piwik analytics
+    trackPageView: function(title, url) {
+        window._paq.push(['setUserId', zzlbox.models.User.get('login')]);
+        window._paq.push(['setCustomVariable', 1, 'isPremium', zzlbox.models.User.get('premium') ? 1 : 0, 'visit']);
+        window._paq.push(['setCustomUrl', url || document.URL]);
+        window._paq.push(['setDocumentTitle', title || document.title]);
+        window.Piwik.getAsyncTracker().trackPageView();
     },
 
     navigate: function(fragment) {

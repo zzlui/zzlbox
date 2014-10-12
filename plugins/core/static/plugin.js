@@ -1,3 +1,4 @@
+
 ZZLBox.Plugins.StaticPages = ZZLBox.Plugin.extend({
 
     initialize: function() {

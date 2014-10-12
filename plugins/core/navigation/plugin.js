@@ -111,6 +111,8 @@ ZZLBox.Plugins.Navigation = ZZLBox.Plugin.extend({
         }
 
         this.last = item;
+
+        zzlbox.router.trackPageView(name, link);
     },
 
     _decorate: function(item) {

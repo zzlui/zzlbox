@@ -86,7 +86,7 @@ ZZLBox.Plugins.Fileset = ZZLBox.Plugin.extend({
             f.files && $.each(f.files, function(i, file) {
                 var addonsStatus = 'show'; // show/hide/hover
 
-                var el = $('<li><span class="file"><a href="' + file.url_dl + '">' + file.name + '</a></span></li>')
+                var el = $('<li><span class="file"><a href="' + file.url_dl + '" target="_blank">' + file.name + '</a></span></li>')
                     .addClass('file')
                     .data('file', file)
                     .appendTo(ret)

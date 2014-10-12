@@ -4,12 +4,21 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta charset="utf-8" />
     <title>ZZLBox</title>
-    <script type="text/javascript" src="/lib/CFInstall.min.js"></script>
+
+    <script type="text/javascript">
+        // debug mode doesn't show error dialog and throw all errors into console
+        //var DEBUG = true;
+        // URIREV added for every ajax-request, this allow to force reset cache
+        // Math.random() will used for debug mode
+        var URIREV = 10;
+    </script>
+
+    <script type="text/javascript" src="/lib/CFInstall.min.js?r10"></script>
 
     <!-- jquery -->
-    <script src="/lib/jquery-1.7.1.js"></script>
+    <script src="/lib/jquery-1.7.1.js?r10"></script>
     <!-- third party cookie plugin, need to load here -->
-    <script src="/lib/jquery.cookie.js"></script>
+    <script src="/lib/jquery.cookie.js?r10"></script>
 
     <!-- core themes css -->
     <link href="/themes/core/fancybox/jquery.fancybox-1.3.4.css" rel="stylesheet"/>
@@ -17,61 +26,76 @@
     <link href="/themes/core/tipTip.css" rel="stylesheet"/>
     <!-- should be at the end -->
     <link href="/themes/core/zzlbox.css" rel="stylesheet" />
+
     <!-- theme css -->
     <script>
         // load theme name from cookies, or use default - zzlbox
-        document.write('<link id="theme-link-css" href="/themes/' + ($.cookie('_zt') || 'bootstrap') + '/theme.css" rel="stylesheet" />');
+        document.write('<link id="theme-link-css" href="/themes/' + ($.cookie('_zt') || 'bootstrap') + '/theme.css?r'+URIREV+'" rel="stylesheet" />');
     </script>
 
     <!-- jquery-ui -->
-    <script src="/lib/jquery-ui-1.8.16.js"></script>
+    <script src="/lib/jquery-ui-1.8.16.js?r10"></script>
 
     <!-- jquery templates -->
-    <script src="/lib/jquery.tmpl.min.js"></script>
+    <script src="/lib/jquery.tmpl.min.js?r10"></script>
 
     <!-- backbone and dependencies -->
-    <script src="/lib/json2.js"></script>
-    <script src="/lib/underscore-min.js"></script>
-    <script src="/lib/backbone.js"></script>
+    <script src="/lib/json2.js?r10"></script>
+    <script src="/lib/underscore-min.js?r10"></script>
+    <script src="/lib/backbone.js?r10"></script>
 
     <!-- third party -->
-    <script src="/lib/waitsync.min.js"></script>
-    <script src="/lib/jquery.iframe-transport.js"></script>
-    <script src="/lib/jquery.mousewheel.js"></script>
-    <script src="/lib/jquery.fileupload.js"></script>
-    <script src="/lib/jquery.fancybox-1.3.4.min.js"></script>
-    <script src="/lib/jquery.filesize.js"></script>
-    <script src="/lib/jquery.filedate.js"></script>
-    <script src="/lib/jquery.zzlform.js"></script>
-    <script src="/lib/jquery.treeview.js"></script>
-    <script src="/lib/jquery.treeview.edit.js"></script>
-    <script src="/lib/jquery.ui.tristate.js"></script>
-    <script src="/lib/jquery.ui.searchinput.js"></script>
-    <script src="/lib/jquery.ui.collapsible.js"></script>
-    <script src="/lib/jquery.ui.longlist.js"></script>
-    <script src="/lib/jquery.ui.scrollbars.js"></script>
-    <script src="/lib/jquery.scrollTo.js"></script>
-    <script src="/lib/jquery.tipTip.js"></script>
-    <script src="/lib/jquery.tools.min.js"></script>
-    <script src="/lib/jquery.locales.js"></script>
+    <script src="/lib/waitsync.min.js?r10"></script>
+    <script src="/lib/jquery.iframe-transport.js?r10"></script>
+    <script src="/lib/jquery.mousewheel.js?r10"></script>
+    <script src="/lib/jquery.fileupload.js?r10"></script>
+    <script src="/lib/jquery.fancybox-1.3.4.min.js?r10"></script>
+    <script src="/lib/jquery.filesize.js?r10"></script>
+    <script src="/lib/jquery.filedate.js?r10"></script>
+    <script src="/lib/jquery.zzlform.js?r10"></script>
+    <script src="/lib/jquery.treeview.js?r10"></script>
+    <script src="/lib/jquery.treeview.edit.js?r10"></script>
+    <script src="/lib/jquery.ui.tristate.js?r10"></script>
+    <script src="/lib/jquery.ui.searchinput.js?r10"></script>
+    <script src="/lib/jquery.ui.collapsible.js?r10"></script>
+    <script src="/lib/jquery.ui.longlist.js?r10"></script>
+    <script src="/lib/jquery.ui.scrollbars.js?r10"></script>
+    <script src="/lib/jquery.scrollTo.js?r10"></script>
+    <script src="/lib/jquery.tipTip.js?r10"></script>
+    <script src="/lib/jquery.tools.min.js?r10"></script>
+    <script src="/lib/jquery.locales.js?r10"></script>
 
     <!-- our scripts -->
-    <script src="/app/zzlbox.js"></script>
-    <script src="/app/router.js"></script>
-    <script src="/app/sync.js"></script>
-    <script src="/app/plugins.js"></script>
+    <script src="/app/zzlbox.js?r10"></script>
+    <script src="/app/router.js?r10"></script>
+    <script src="/app/sync.js?r10"></script>
+    <script src="/app/plugins.js?r10"></script>
+
+    <!-- stats -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(['setDocumentTitle', '/']);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            //var u="https://zzlbox.com/";
+            var u="/";
+            _paq.push(['setTrackerUrl', u+'pwk/php']);
+            _paq.push(['setSiteId', 2]);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; 
+            g.async=true; g.defer=true; 
+            g.src=u+'pwk/js?r'+URIREV; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
 
     <!-- init zzlbox -->
     <script>
-        // debug mode doesn't show error dialog and throw all errors into console
-        //var DEBUG = true;
-        // URIREV added for every ajax-request, this allow to force reset cache
-        // Math.random() will used for debug mode
-        var URIREV = 9;
         $(function(){
             new ZZLBox();
         });
     </script>
+
 </head>
 <body>
 
