@@ -2,12 +2,6 @@
 ZZLBox.Plugins.StaticPages = ZZLBox.Plugin.extend({
 
     initialize: function() {
-        $('#footer').toggleClass('collapsible ui-widget-content', !!zzlbox.models.User.get('auth'));
-
-        zzlbox.models.User.bind('change:auth', function(model, auth){
-            $('#footer').toggleClass('collapsible ui-widget-content', auth)
-        });
-
         $.tmpl('footer-menu')
             .find('a')
                 .each(function() {

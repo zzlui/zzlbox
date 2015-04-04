@@ -28,31 +28,6 @@ ZZLBox.Plugins.Welcome = ZZLBox.Plugin.extend({
                         'padding-bottom': $('#footer').outerHeight(true),
                     });
 
-                    var ht = $('<div class="scroll-highlight-top" />')
-                                .hide()
-                                .css({position: 'fixed'})
-                                .appendTo('body'),
-                        hb = $('<div class="scroll-highlight-bottom" />')
-                                .hide()
-                                .css({position: 'fixed'})
-                                .appendTo('body'),
-                        fixHPos = function() {
-                            var o = $('#content').offset(), w = $('#content').width();
-                            ht.css({
-                                'top': o.top - 1,
-                                'left': o.left,
-                                width: w
-                            }).toggle(!!$(window).scrollTop());
-                            hb.css({
-                                'top': $(window).height() - $('#footer').outerHeight(),
-                                'left': o.left,
-                                width: w
-                            }).toggle(!!($('body').get(0).scrollHeight - $(window).height() - $(window).scrollTop()));
-                        };
-                    $(window).on('scroll', fixHPos);
-                    $(window).on('resize', fixHPos);
-                    fixHPos();
-
                     zzlbox.router.bind('route:Welcome', function() {
                         if(zzlbox.models.User.get('auth')) {
                             setTimeout(function() {

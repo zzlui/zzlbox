@@ -206,10 +206,11 @@ ZZLBox.Plugins.prototype.initPlugin = function(id, callback) {
                 callback && callback();
             });
             $.each(_.union(info.include), function(i, incl) {
-                $.ajax(info.url + incl, {
+                $.ajax(info.url + incl + '?' + URIREV, {
                     crossDomain: true, // jquery will attach new script tag in head instead eval
                     complete: ws.wrap(function(){}),
-                    dataType: 'script'
+                    dataType: 'script',
+                    cache: true,
                 });
             });
         } else {

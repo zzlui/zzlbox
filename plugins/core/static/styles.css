@@ -1,10 +1,3 @@
-#footer .copyright {
-    position: fixed;
-    bottom: 2px;
-    right: 2px;
-    font-size: 0.7em;
-}
-
 .static-page {
     /*box-shadow: #DDD -1px 0px 2px;*/
     /*border: 1px solid #DDD;*/
@@ -14,6 +7,7 @@
 
 .footer-menu {
     font-size: 0.8em;
+    padding-top: 2em;
 }
 
 .footer-menu div {
@@ -21,13 +15,6 @@
     display: inline-block;
     text-align: left;
     margin: 0 15px;
-}
-
-.footer-menu div.footer-menu-account {
-    display: none;
-}
-#footer.collapsible .footer-menu div.footer-menu-account {
-    display: inline-block;
 }
 
 .footer-menu ul {
@@ -45,23 +32,6 @@
     -ms-transition: .2s linear .2s;
     transition: .2s linear .2s;
     /*margin-bottom: 20px;*/
-}
-
-#footer.collapsible {
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    bottom: 0;
-}
-
-#footer.collapsible .footer-menu ul {
-    margin: 0;
-    max-height: 0px;
-}
-
-#footer.collapsible:hover .footer-menu ul {
-    max-height: 150px;
-    margin: 5px 0;
 }
 
 .footer-menu a.dmca {
