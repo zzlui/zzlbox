@@ -133,7 +133,9 @@ ZZLBox.Plugins.FileMedia = ZZLBox.Plugin.extend({
 
         if(support == 0) {
             return;
-        } else if(support < count && fileset) {
+        } 
+
+        if(support < count && fileset) {
             warn = '<div class="info" style="' +
                             'position: absolute; width: 300px; margin-top: 50px; margin-right: -20px;">' +
                             __('media.supportwarn', support, count) + '</div>';
@@ -183,6 +185,7 @@ ZZLBox.Plugins.FileMedia = ZZLBox.Plugin.extend({
                             success: function(fileset, tree) {
                                 that.addMediaList(fileset);
                             }
+
                         });
                     }
                 })

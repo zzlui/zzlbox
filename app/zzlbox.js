@@ -36,7 +36,7 @@ var ZZLBox = function() {
 
     if(window.DEBUG) {
         // disable cache in DEBUG mode
-        window.URIREV = Math.random();
+        // window.URIREV = Math.random();
     }
 
     // save plugins/views/models/collections for later using

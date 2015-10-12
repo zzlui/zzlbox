@@ -64,21 +64,36 @@ ZZLBox.Plugins.Fileset = ZZLBox.Plugin.extend({
                     .append('<ul />')
                     .data('folder', v)
                     //.append(folder(v));
-
+                    //
                 var actel = $('<span />').addClass('fileset-actions-folder').css({
                     display: 'inline-block',
                     position: 'relative',
                     margin: '-100px -5px -100px 5px',
                     'top': '4px'
-                }).hide().appendTo(el.children('span').css({
+                }).appendTo(el.children('span').css({
                     display: 'inline-block',
                     position: 'relative'
                 }).hover(function() {
                     //actel.toggle();
-                    actel.css('display', 'inline-block');
+                    // actel.css('display', 'inline-block');
                 }, function(){
-                    actel.css('display', 'none');
+                    // actel.css('display', 'none');
                 }));
+
+                // var actel = $('<span />').addClass('fileset-actions-folder').css({
+                //     display: 'inline-block',
+                //     position: 'relative',
+                //     margin: '-100px -5px -100px 5px',
+                //     'top': '4px'
+                // }).hide().appendTo(el.children('span').css({
+                //     display: 'inline-block',
+                //     position: 'relative'
+                // }).hover(function() {
+                //     //actel.toggle();
+                //     actel.css('display', 'inline-block');
+                // }, function(){
+                //     actel.css('display', 'none');
+                // }));
                 zzlbox.plugins.hook('fileset-actions-folder', actel, model, v.allfiles, v);
             });
 
@@ -100,9 +115,9 @@ ZZLBox.Plugins.Fileset = ZZLBox.Plugin.extend({
                             .appendTo(el);
 
                 // additional info
-                var addons = $('<div class="addons" />').appendTo(el).toggle(addonsStatus != 'hide');
+                var addons = $('<div class="addons" />').appendTo(el);//.toggle(addonsStatus != 'hide');
 
-                el.toggleClass('addons-on-hover', addonsStatus == 'hover');
+                // el.toggleClass('addons-on-hover', addonsStatus == 'hover');
 
                 /*if(addonsStatus == 'hover') {
                     // can't make this via CSS

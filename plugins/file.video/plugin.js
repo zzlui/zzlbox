@@ -20,7 +20,7 @@ ZZLBox.Plugins.FileVideo = ZZLBox.Plugin.extend({
 
     fileset: function(item, model, file) {
         // ensure that we have video file (not audio or image)
-        if(parseInt(file.bitrate) > 0 && parseInt(file.width) > 0) {
+        if(file.ct.indexOf('video') == 0) {
             $('<span />').html(', ' + file.width + 'x' + file.height).appendTo(item);
         }
     }
