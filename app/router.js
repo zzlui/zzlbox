@@ -95,11 +95,16 @@ ZZLBox.Router = Backbone.Router.extend({
 
     // piwik analytics
     trackPageView: function(title, url) {
-        window._paq.push(['setUserId', zzlbox.models.User.get('login')]);
-        window._paq.push(['setCustomVariable', 1, 'isPremium', zzlbox.models.User.get('premium') ? 1 : 0, 'visit']);
-        window._paq.push(['setCustomUrl', url || document.URL]);
-        window._paq.push(['setDocumentTitle', title || document.title]);
-        window.Piwik.getAsyncTracker().trackPageView();
+        try {
+            window._paq.push(['setUserId', zzlbox.models.User.get('login')]);
+            window._paq.push(['setCustomVariable', 1, 'isPremium', zzlbox.models.User.get('premium') ? 1 : 0, 'visit']);
+            window._paq.push(['setCustomUrl', url || document.URL]);
+            window._paq.push(['setDocumentTitle', title || document.title]);
+            window.Piwik.getAsyncTracker().trackPageView();
+        }
+        catch (err) {
+            console.log(err.message);
+        }
     },
 
     navigate: function(fragment) {

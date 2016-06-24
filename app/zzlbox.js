@@ -49,6 +49,12 @@ var ZZLBox = function() {
     this.last = null;
 
     window.onerror = function(message, file, line) {
+        console.log(message + ' ' + file + ':' + line);
+        // pwk tracker
+        if (file.indexOf('/pwk/') > 0) { 
+            console.log('pwk error');
+            return true;
+        }
         // XXX important!! Line nubmber should be saved to avoid memory leaks
         if(!(file.split('/').pop() == 'zzlbox.js' && line == 112)) {
             zzlbox.error({
